@@ -1,0 +1,592 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.section1 {
+    position: relative;
+    width: 100%;
+    height: 638px;
+    background: #1B1974;
+    overflow: hidden;
+}
+
+.text_header {
+    color: #FFFFFF;
+    position: absolute;
+    top: 319px;
+    margin-left: 73px;
+    z-index: 1000;
+}
+
+.text_header h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.text_header h2 {
+    font-size: 36px;
+    font-weight: 400;
+    animation: leftAnimation 2.5s ease;
+    opacity: 1;
+}
+
+@keyframes leftAnimation {
+    0% {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+}
+
+.chart_container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 91px;
+    right: 0;
+    margin-right: 73px;
+}
+
+.chart_container .chart {
+    position: relative;
+    width: 811px;
+    height: 445px;
+    right: 0;
+    background: rgba(73, 72, 138, 0.29);
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.chart_container .sub_chart {
+    font-style: italic;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.24);
+    padding: 5px;
+}
+
+.chart_container .barras {
+    position: relative;
+    display: flex;
+    width: 8%;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.chart_container .barras::after {
+    content: "";
+    background-color: darkorange;
+    position: absolute;
+    width: 100%;
+    height: 83%;
+    background: rgba(92, 138, 255, 0.05);
+}
+
+
+.chart {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.chart .bars {
+    position: relative;
+    align-items: flex-end;
+    width: 100%;
+    top: 335px;
+    background: rgba(92, 138, 255, 0.2);
+    animation: animation 3s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation {
+    100%{
+        top: 0px;
+    }
+}
+
+.chart .barras.basico .bars {
+    height: 25%;
+    animation-delay: 4s;
+}
+
+.chart .barras.intermedio .bars {
+    height: 55%;
+    animation-delay: 2s;
+}
+
+.chart .barras.avanzado .bars {
+    height: 83%;
+}
+
+.chart img {
+    padding-bottom: 5px;
+    width: 80%;
+    opacity: 0;
+    animation: opacity 3s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacity {
+    100% {
+        opacity: 1;
+    }
+}
+
+.barras.basico img {
+    animation-delay: 5.5s;
+}
+
+.barras.intermedio img {
+    animation-delay: 3.5s;
+}
+
+.barras.avanzado img {
+    animation-delay: 1.5s;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    background: rgba(56, 103, 118, 0.47);
+    transition: transform 3s;
+}
+
+.circle:hover {
+    transform: scale(1.5);
+}
+
+#circle1 {
+    bottom: -30px;
+    left: -15px;
+}
+
+#circle2 {
+    right: -25px;
+    top: -12px;
+}
+
+.section2 {
+    position: relative;
+    width: 100%;
+    height: 1540px;
+    background: #0F0E40;
+    padding-bottom: 150px;
+}
+
+.center {
+    position: relative;
+    height: 100%;
+    width: 20%;
+    margin: auto;
+}
+
+.point {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.point.inicial {
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 20px);
+    top: -50px;
+    z-index: 2000;
+}
+
+.load_bar {
+    position: relative;
+    top: -20px;
+    max-width: 10px;
+    width: 5%;
+    height: 0%;
+    background: #fff;
+    margin: auto;
+    border-radius: 0 0 15px 15px;
+}
+
+.load_container { 
+    position: absolute;
+    top: -20px;
+    width: 6%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.14);
+    left: calc(50% - 3%);
+    border-radius: 0 0 15px 15px;
+}
+
+.right_card {
+    position: absolute;
+    top: 3%;
+    width: 50%;
+    height: 25%;
+    right: 0;
+}
+
+.ancla {
+    position: absolute;
+    width: 15%;
+    height: 3%;
+    background: #fff;
+    z-index: 3000;
+    top: 50%;
+}
+
+.ancla::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    right: -5px;
+    top: -10px;
+}
+
+.right_card .img_container {
+    position: relative;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    margin-right: 45px;
+}
+.right_card .img_container img {
+    width: 60%;
+    height: 68%;
+    position: absolute;
+    z-index: 0;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.right_card .img_container img:nth-child(1){
+    right: 0;
+}
+
+.right_card .img_container img:nth-child(2){
+    left: 0;
+    bottom: 0;
+}
+
+.subtext_img {
+    color: rgba(255, 255, 255, 0.24);
+    text-align: right;
+    font-size: 23px;
+    padding: 5px 20px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.left_card {
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    height: 25%;
+    left: 0;
+}
+
+.left_card .ancla {
+    right: 0;
+}
+
+.left_card .ancla::before {
+    left: -5px;
+}
+
+.left_card .img_container {
+    position: relative;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    margin-left: 45px;
+}
+
+
+.left_card .img_container img {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    border-radius: 7px;
+    object-fit: scale-down;
+}
+
+.left_card .img_container img:nth-child(1), .left_card.second .img_container a:nth-child(1) img {
+    left: 0;
+}
+
+.left_card .img_container img:nth-child(2), .left_card.second .img_container a:nth-child(2) img {
+    right: 0;
+    bottom: 0;
+    left: initial;
+}
+
+.left_card .subtext_img {
+    text-align: left;
+}
+
+.subtext_img .description {
+    font-size: 0.7em;
+}
+
+.right_card.second {
+    top: 38%;
+}
+
+.left_card.second {
+    top: 60%
+}
+
+.left_card.second img {
+    cursor: pointer;
+}
+
+.right_card, .left_card {
+    visibility: hidden; 
+}
+
+.card_active {
+    visibility: visible;
+    animation: cardAnimation 3s ease;
+}
+
+@keyframes cardAnimation {
+    0% {
+        opacity: 0;
+
+    } 100% {
+
+        opacity: 1;
+    }
+}
+
+.section3 {
+    position: relative;
+    width: 100%;
+    height: 610px;
+    background: #000;
+    overflow: hidden;
+}
+
+.section3 .text_container {
+    visibility: hidden;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    margin: auto;
+}
+
+.section3 .text_container .main_title {
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.section3 .text_container .description_container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    line-height: 2em;
+    font-weight: 500;
+    margin-left: 28px;
+    font-size: 1.2em;
+}
+
+.section3 .text_container .description_container .left_text {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.section3 .text_container .description_container .right_text {
+    text-align: left;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+.background_text{
+    position: absolute;
+    color:rgba(255, 255, 255, 0.075);
+    font-size: 1.6em;
+    line-height: 1.6em;
+    padding: 20px;
+    bottom: 0;
+    z-index: 1000;
+    user-select: none;
+}
+
+.active_text {
+    visibility: visible!important;
+    animation: cardAnimation 3s ease;
+}
+
+
+@media (max-width: 1200px) {
+    .section1 {
+        height: 800px;
+    }
+
+    .text_header h1 {
+        font-size: 2.9em;
+    }
+
+    .text_header h2 {
+        font-size: 1.8em;
+    }
+
+    .text_header, .chart_container {
+        position: relative;
+    }
+
+    .chart_container {
+        flex-direction: column-reverse;
+        top: 0px;
+        margin: 0 20px;
+        height: 70%;
+    }
+    
+    .chart_container .chart {
+        width: 100%;
+    }
+
+    .text_header {
+        top: 80px;
+    }
+
+    .section2 {
+        height: 2000px;;
+    }
+
+    .center {
+        margin-right: 0;
+    }
+
+    .ancla, .ancla::before {
+        display: none;
+    }
+
+    .right_card, .right_card.second, .left_card, .left_card.second {
+        width: 100%;
+        height: 20%;
+    }
+
+    .img_container {
+        margin-left: 60px!important;
+        margin-top: 50px;
+    }
+
+    .subtext_img {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    .left_card {
+        top: 28%;
+    }
+
+    .right_card.second {
+        top: 51%;
+    }
+
+    .left_card.second {
+        top: 75%;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .section1 {
+        height: 700px;
+    }
+
+    .chart_container {
+        height: 50%;
+        top: 90px;
+    }
+
+    .section3 {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 414px) {
+    .section1 {
+        height: 600px;
+    }    
+
+    .text_header {
+        margin-left: 20px;
+    }
+    
+    .text_header h1 {
+        font-size: 2em;
+    }
+
+    .text_header h2 {
+        font-size: 1.5em;
+    }
+
+    .chart_container {
+        height: 50%;
+    }
+
+    .section2 {
+      height: auto;
+    }
+
+    .center {
+        position: absolute;
+        right: 0;
+    }
+
+    .point.inicial {
+        transform: scale(0.5);
+    }
+
+    .right_card, .right_card.second, .left_card, .left_card.second {
+        position:relative;
+        height: auto;
+        top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    .img_container {
+        width: 100%!important;
+        margin-left: 10px!important;
+        height: auto!important;
+    }
+
+    .img_container img {
+        position: relative!important;
+        width: 80%!important;
+        height: auto!important;
+        margin: 5px;
+    }
+
+
+    .subtext_img {
+        font-size: 1.3em;
+    }
+
+    .section3 {
+        height: auto;
+    }
+
+    .section3 .text_container {
+        margin-bottom: 89px;
+    }
+
+    .section3 .text_container .main_title {
+        font-size: 2.0em;
+    }
+
+    .section3 .text_container .description_container {
+        font-size: 0.8em;
+        padding: 0;
+    }
+}
