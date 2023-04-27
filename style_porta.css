@@ -393,7 +393,7 @@ body {
     justify-content: center;
     line-height: 2em;
     font-weight: 500;
-    margin-left: 28px;
+    /*margin-left: 28px;*/
     font-size: 1.2em;
 }
 
@@ -513,7 +513,7 @@ body {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 650px) {
     .section1 {
         height: 600px;
     }    
