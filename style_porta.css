@@ -174,7 +174,7 @@ body {
     width: 100%;
     height: 1540px;
     background: #0F0E40;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 
 .center {
@@ -577,7 +577,12 @@ body {
         height: auto;
     }
 
+   .section3 .text_container {
+        margin-bottom: 20px;
+    }
+    
     .section3 .text_container .main_title {
         font-size: 2.0em;
     }
+   
 }
