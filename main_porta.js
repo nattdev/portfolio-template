@@ -77,4 +77,4 @@ let loadBar = function(){
 
 window.addEventListener("scroll", loadBar);
 
-window.addEventListener("touchstart", loadBar) //Opcional
+//window.addEventListener("touchstart", loadBar)
