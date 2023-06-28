@@ -341,10 +341,6 @@ body {
     top: 60%
 }
 
-.left_card.second img {
-    cursor: pointer;
-}
-
 .right_card, .left_card {
     visibility: hidden; 
 }
